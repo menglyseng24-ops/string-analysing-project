@@ -20,9 +20,9 @@ def analyze_string(words):
             else:
                 consonant_number += 1
     character_number = vowel_number + consonant_number
-    char_label = 'character' if character_number == 1 else 'characters'
-    vowel_label = 'vowel' if vowel_number == 1 else 'vowels'
-    consonant_label = 'consonant' if consonant_number == 1 else 'consonants'
+    char_label = 'character' if character_number in (1,0) else 'characters'
+    vowel_label = 'vowel' if vowel_number in (1,0) else 'vowels'
+    consonant_label = 'consonant' if consonant_number in (1,0) else 'consonants'
     return (f'''Result:
     The word {words} has:
     - {character_number} {char_label}
